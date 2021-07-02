@@ -23,7 +23,7 @@ int main(){
     int num;
     cin >> num;
     long int x=0,y=1 ;
-
+    
     for(int i=0 ; i<num; i++){
         cin >> x >> y;
 
