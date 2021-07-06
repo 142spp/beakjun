@@ -24,9 +24,9 @@ int main(){
 
         int num;
         cin >> num;
-        
-        int p1=num/2, p2=num/2;
 
+        int p1=num/2, p2=num/2;
+        
         while(1){
 
             if(!is_nprime[p1]&&!is_nprime[p2]){
