@@ -1,38 +1,30 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     int num;
-    scanf("%d",&num);
+    cin >> num;
 
-
-    int numlist [num]={0,};
-    int sortedlist [num]={0,};
-    int countlist [10000] = {0,};
-    int countSum [10000] ;
+    int numlist [10001]={0,};
+    int max =0;
 
     for(int i=0; i<num; i++){
-        scanf("%d",&numlist[i]);
+        int input;
+        cin >> input;
 
-        countlist[numlist[i]] ++;
+        if(max < input) max = input;
+
+        numlist[input]++;
     }
 
-    countSum[0] = countlist[0];
-
-    for(int i=1; i<num; i++){
-        countSum[i] = countSum[i-1] + countlist[i];
+    for(int i=0; i<=max; i++){
+        if(numlist[i]!=0){
+            for(int j=0; j<numlist[i]; j++){
+                cout << i << "\n";
+            }
+        }
     }
-
-
-
-    for(int i=num-1; i>=0; i++){
-        sortedlist[countSum[numlist[i]]] = numlist[i];
-        countSum[numlist[i]]--;
-    }
-
-    for(int i=0; i<num; i++){
-        printf("%d",sortedlist[i]);
-    }
-
 }
