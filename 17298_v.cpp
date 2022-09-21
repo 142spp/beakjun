@@ -4,6 +4,12 @@ using namespace std;
 
 vector<int> nge;
 
+class vc{
+    vc(){
+        int 
+    }
+}
+
 void NGE(int index){
     int i=index+1;
     for(; i<nge.size(); i++){

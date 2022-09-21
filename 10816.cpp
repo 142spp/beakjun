@@ -1,25 +1,23 @@
 #include <bits/stdc++.h>
 
+#define MAX 500001
+
 using namespace std;
 
-vector<int> vc;
+int arr[MAX];
 
 int main(){
-    int n;
-    while(n--){
-        int c; cin >>c;
-        vc.push_back(c);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    int n; cin >> n;
+    for(int i=0; i< n; i++){
+        cin >> arr[i];
     }
-    sort(vc.begin(),vc.end());
-    vector<pair<int,int>> count;
-    count.push_back(make_pair(vc[0],1));
-    for(int i=1; i<vc.size(); i++){
-        if(vc[i]!=vc[i-1]) count.push_back(make_pair(vc[i],1));
-        else count.back().second++;
-    }
-
-    int m;
+    sort(arr,arr+n);
+    int m; cin >> m;
     while(m--){
-
+        int c; cin >> c;
+        printf("%ld ",upper_bound(arr,arr+n,c)-lower_bound(arr,arr+n,c));
     }
 }
