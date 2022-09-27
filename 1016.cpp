@@ -18,6 +18,7 @@ bool is_nonsqr(long long i){
     for(int j=0; prs[j]<=sqrt(i); j++){
         if(i%j == 0) return false;
     }
+    for(int j=0; j < a; j++)
     return true;
 }
 
