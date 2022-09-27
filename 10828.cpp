@@ -4,6 +4,9 @@
 using namespace std;
 
 int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(null);
+
     stack<int> st;
     int num_of_order;
     cin >> num_of_order;
